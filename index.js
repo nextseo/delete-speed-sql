@@ -4,11 +4,11 @@ const port = 3000;
 const mysql = require("mysql2/promise");
 
 const connection = mysql.createPool({
-  host: "db-mysql-nyc3-29411-do-user-15536941-0.c.db.ondigitalocean.com",
-  user: "doadmin",
-  password: "AVNS_JRT_Pbi75Cylk9vK3h7",
-  database: "devsriwa_app_share",
-  port :25060
+  host: "147.50.231.19",
+  user: "devsriwa_taxinvoice",
+  password: "*Devsri1234",
+  database: "taxinvoice_db",
+  port :3306
 });
 
 app.get("/", (req, res) => {
@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.get("/users", async (req, res) => {
   try {
-    const sql = "SELECT * FROM home_share"
+    const sql = "SELECT * FROM users "
     const [result] = await connection.query(sql)
     res.json(result)
   } catch (error) {
