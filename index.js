@@ -4,10 +4,10 @@ const port = 3000;
 const mysql = require("mysql2/promise");
 
 const connection = mysql.createPool({
-  host: "147.50.231.19",
-  user: "devsriwa_taxinvoice",
-  password: "*Devsri1234",
-  database: "taxinvoice_db",
+  host: "119.59.100.50",
+  user: "hirun_tax_db",
+  password: "hirun_tax_db",
+  database: "hirun_tax_db",
   port :3306
 });
 
